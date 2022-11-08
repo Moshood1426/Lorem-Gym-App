@@ -2,6 +2,7 @@
 
 .back {
     position: absolute;
+    z-index: 2;
     top: 4vh;
     left: 10%;
     color: $accentColor;
@@ -29,6 +30,8 @@
     height: 20vh;
     background-size: cover;
     clip-path: polygon(100% 0, 100% 91%, 47% 100%, 0 88%, 0 0);
+    position: relative;
+    z-index: 1;
 
     @include media-lg {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8% 49%);
