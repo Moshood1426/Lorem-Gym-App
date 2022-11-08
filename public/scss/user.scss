@@ -1,0 +1,148 @@
+@import "config";
+
+.intro_nav {
+    padding: 0 2em;
+    padding-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.menu-btn {
+    right: 2rem;
+}
+
+.user {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    position: relative;
+    background-color: $primary-300;
+    margin-bottom: 4rem;
+
+    &_container {
+        padding: 2em .5em;
+    }
+
+    &_identifier {
+        background-color: $grey-200;
+        color: $primary-400;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        width: fit-content;
+        padding: .35em 1em;
+        font-family: $AirBnBMedium;
+        font-weight: bold;
+    }
+
+    &_info {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: .75em;
+        row-gap: 1em;
+        color: $grey-100;
+    }
+
+    &_mail {
+        color: $grey-100;
+    }
+
+    &_sub {
+        border-top: $grey-200 solid 1.5px;
+        border-bottom: $grey-200 solid 1.5px;
+        padding: 1em 0;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.5em;
+
+        & > p {
+            margin-bottom: 0em;
+            color: $accentColor;
+        }
+    }
+
+    &_gender {
+        background-color: $backgroundColor;
+        border: 1px solid $grey-100;
+        border-radius: 15px;
+        padding: .35em;
+        font-size: 1rem;
+        color: $grey-200;
+    }
+}
+
+.info_icon {
+    margin-right: .5em;
+    color: $accentColorLight;
+}
+
+.sub_status, .sub_type, .expiry_date {
+    color: $white;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-left: .35em;
+}
+
+.payment {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 5em;
+   
+    &_container {
+        border-top: $grey-300 solid 2px;
+        border-bottom: $grey-200 solid 2px;
+        padding: 2em;
+
+        @include media-md {
+            display: flex;
+            justify-content: space-between;
+            gap: 2em;
+        }
+    }
+
+    &_details{
+
+        &_info {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 1.5em;
+            row-gap: .65em;
+            color: $grey-100;
+
+
+            & > p {
+                margin-bottom: 0;
+            }
+        }
+
+        &_price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $accentColorLight;
+        }
+    }
+
+
+}
+
+.payment_btn {
+    background-color: $white;
+    opacity: .8;
+    color: $accentColor;
+    padding: 1em 2.3em;
+
+    &:hover {
+        background-color: $accentColor;
+        color: $white;
+    }
+
+    @include media-md {
+        align-self: center;
+
+    }
+}
+
+

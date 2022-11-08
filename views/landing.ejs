@@ -1,0 +1,107 @@
+<%- include('./includes/head.ejs') %>
+    <link rel="stylesheet" href="/styles/landing.css">
+</head>
+
+    <body>
+        <section class="intro">
+            <nav class="intro_nav">
+                <div class="intro_nav_image">
+                    <img src="/assets/images/Logo.svg" class="logo"/>
+                </div>
+
+                <div class="menu-btn">
+                    <span class="menu-btn__burger"></span>
+                </div>
+
+                <ul class="intro_nav_list">
+                    <a href="/user/admin" class="intro_nav_list_item admin">
+                        Admin
+                    </a>
+                    <a href="/auth/login" class="intro_nav_list_item sign_in">
+                        Sign In
+                    </a>
+                </ul>
+            </nav>
+
+            <div class="intro_main">
+                <h1 class="intro_main_title">
+                    Get That Amazing Body At 
+                    <span class="gym_name">Lorem Ipsum</span> Gym
+                </h1>
+                <p class="intro_main_sub_title">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries</p>
+                <form method="GET" action="/auth/register">
+                    <button class="btn intro_btn">Start Now</button>
+                </form>
+            </div>
+        </section>
+
+        
+        <section class="about">
+            <h3 class="about_title">
+                We cherish your <span class="body_goals">body goals</span> than the rarest diamond
+            </h3>
+            <div class="about_content">
+                <h5 class="about_content_title">ABOUT THE GYM</h5>
+                <p class="about_content_subtitle">
+                    Lorem ipsum is placeholder text commonly used in the graphic, 
+                    print, and publishing industries. Lorem ipsum
+                    is placeholder text commonly used in the graphic, print.
+                </p>
+            </div>
+        </section>
+
+        <section class="gym_img">
+            <div class="gym_img_content"></div>
+        </section>
+        
+        <section class="feedback">
+            <h5 class="feedback_title">What our customers say</h5>
+            <div class="feedback_carousel">
+                <div class="feedback_carousel_item active">
+                    <p class="feedback_carousel_item_date">22nd Dec, 2021</p>
+                    <h4 class="feedback_carousel_item_title">Mike Ross</h4>
+                    <p class="feedback_carousel_item_subtitle">
+                        Nemo enim ipsam voluptatem quia
+                        voluptas sit aspernatur aut odit aut fugit, sed
+                        quia consequuntur magni quia consequuntur magni 
+                    </p>
+                </div>
+                <div class="feedback_carousel_item">
+                    <p class="feedback_carousel_item_date">17th Oct, 2022</p>
+                    <h4 class="feedback_carousel_item_title">Albert Aeinten</h4>
+                    <p class="feedback_carousel_item_subtitle">
+                        Lorem ipsum is placeholder text commonly used in the graphic,
+                        print, and publishing industries.Lorem ipsum is placeholder
+                        text commonly used in the graphic, print.
+                    </p>
+                </div>
+                <div class="feedback_carousel_item">
+                    <p class="feedback_carousel_item_date">18th Sept, 2021</p>
+                    <h4 class="feedback_carousel_item_title">John Doe</h4>
+                    <p class="feedback_carousel_item_subtitle">
+                        Sed ut perspiciatis unde omnis iste natus error sit 
+                        voluptatem accusantium doloremque laudantium, totam rem
+                        aperiam, eaque ipsa quae ab illo inventore veritatis et
+                        quasi architecto beatae
+                    </p>
+                </div>
+                <div class="next">
+                    <img src="/assets/images/right-arrow.png" class="next_arrow">
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+         
+            <p class="footer_title">
+                Looking to share this experience? Share via
+            </p>
+            <div class="footer_icons_div">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-reddit"></i>
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>

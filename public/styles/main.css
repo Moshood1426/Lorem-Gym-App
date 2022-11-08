@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'AirbnbCereal_W_Md';
+  src: url("AirbnbCerealWMd.eot");
+  src: url("AirbnbCerealWMd.eot?#iefix") format("embedded-opentype"), url("AirbnbCerealWMd.woff2") format("woff2"), url("AirbnbCerealWMd.woff") format("woff"), url("AirbnbCerealWMd.ttf") format("truetype"), url("AirbnbCerealWMd.svg#AirbnbCerealWMd") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'AirbnbCereal_W_Lt';
+  src: url("AirbnbCerealWLt.eot");
+  src: url("AirbnbCerealWLt.eot?#iefix") format("embedded-opentype"), url("AirbnbCerealWLt.woff2") format("woff2"), url("AirbnbCerealWLt.woff") format("woff"), url("AirbnbCerealWLt.ttf") format("truetype"), url("AirbnbCerealWLt.svg#AirbnbCerealWLt") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'AirbnbCereal_W_XBd';
+  src: url("AirbnbCerealWXBd.eot");
+  src: url("AirbnbCerealWXBd.eot?#iefix") format("embedded-opentype"), url("AirbnbCerealWXBd.woff2") format("woff2"), url("AirbnbCerealWXBd.woff") format("woff"), url("AirbnbCerealWXBd.ttf") format("truetype"), url("AirbnbCerealWXBd.svg#AirbnbCerealWXBd") format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; }
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #151515;
+  font-family: "AirbnbCereal_W_Md", Sans-Serif;
+  line-height: 1.75;
+  color: #fff; }
+
+a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: inherit; }
+
+a,
+button {
+  line-height: 1.15; }
+  a:disabled,
+  button:disabled {
+    cursor: not-allowed; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.2rem;
+  font-family: "AirbnbCereal_W_XBd", Sans-Serif;
+  line-height: 1.3;
+  text-transform: capitalize;
+  letter-spacing: 1px; }
+
+h1 {
+  font-size: 3.052rem; }
+
+h2 {
+  font-size: 2.441rem; }
+
+h3 {
+  font-size: 1.953rem; }
+
+h4 {
+  font-size: 1.563rem; }
+
+h5 {
+  font-size: 1.25rem; }
+
+p {
+  margin-bottom: 1.4rem;
+  max-width: 40em;
+  font-family: "AirbnbCereal_W_Lt", Sans-Serif, "sans-serif"; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover; }
+
+.logo {
+  height: 40px; }
+
+.btn {
+  cursor: pointer;
+  color: #888484;
+  background: #222;
+  border: 1px solid #333632;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease-in-out all;
+  text-transform: capitalize;
+  display: inline-block;
+  font-family: "AirbnbCereal_W_Md", Sans-Serif, "sans-serif";
+  font-weight: bold;
+  font-size: 1rem; }
+  .btn:hover {
+    background: #1b1b1d;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    color: #488618; }
+  .btn-block {
+    height: 35px; }
+
+.form {
+  width: 85%;
+  max-width: 500px;
+  margin: 3rem auto;
+  transition: 0.3s ease-in-out all; }
+  .form_row {
+    margin-bottom: 1rem; }
+  .form_label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    letter-spacing: 1px; }
+  .form_input, .form_select {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    background: #202020;
+    border: 1px solid #464A45;
+    color: #888484; }
+  .form_input, .form_select {
+    height: 45px; }
+
+::placeholder {
+  font-family: inherit;
+  color: #535851;
+  text-transform: capitalize; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #202020 inset !important;
+  box-shadow: 0 0 0 30px #202020 inset !important; }
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #888484 !important; }

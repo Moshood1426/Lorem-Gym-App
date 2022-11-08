@@ -1,0 +1,225 @@
+@import "config";
+
+.back {
+    position: absolute;
+    top: 4vh;
+    left: 10%;
+    color: $accentColor;
+}
+
+.register_container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    
+    @include media-lg {
+        flex-direction: row;
+        height: 100vh;
+    }
+}
+
+.bg_img {
+    background: 
+        linear-gradient(
+            to right,
+            rgba(27, 27, 29, 0.65),
+            rgba(27, 27, 29, 0.65)
+        ),  
+        url("../assets/images/register.jpg") center center;
+    height: 20vh;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 91%, 47% 100%, 0 88%, 0 0);
+
+    @include media-lg {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 8% 49%);
+        height: 100vh;
+        order: 2;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+    }
+}
+
+.form {
+
+    &_intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &_image {
+            margin-bottom: 1em;
+
+            & > img {
+                height: 35px;
+            }
+        }
+
+        &_title {
+            margin-bottom: 1rem;
+            max-width: 330px;
+        }
+
+        &_subtitle {
+            font-size: $smallText;
+            font-family: $AirBnBLight;
+            color: $grey-100;
+        }
+    }
+
+    &_name {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    &_btn {
+        font-size: $smallText;
+        padding: .75em;
+        width: 100%;
+    }
+
+    &_item_container {
+        padding: 3em 1.5em;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    @include media-lg {
+        &_intro {
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            text-align: left;
+
+            &_title {
+                margin-bottom: 1rem;
+                max-width: fit-content;
+                font-size: 2.25rem;
+            }
+        }
+
+        &_row {
+            margin-bottom: 1.2em;
+        }
+    }
+
+}
+
+.form_content {
+    display: flex;
+    align-items: center;
+
+
+    @include media-lg {
+        height: 100vh;
+        order: 1;
+        width: 50%;
+    }
+}
+
+.radio_row {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+    border: $grey-400 solid 1px;
+    padding: 1.5em 1em;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        background-color: $black;
+    }
+}
+
+.form {
+    &_sub {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1.5em;
+
+        &_item_subtitle {
+            color: $grey-200;
+            font-family: $AirBnBLight;
+            font-size: $smallText;
+        }
+
+        &_item_price {
+            color: $accentColorLight;
+        }
+
+    }
+
+    h5 {
+        margin-bottom: 1em;
+        font-family: $AirBnBMedium;
+    }
+}
+
+.alert {
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 1rem;
+    border-color: transparent;
+    border-radius: $borderRadius;
+    text-align: center;
+    letter-spacing: $letterSpacing;
+}
+
+.alert-danger {
+    color: $red-dark;
+    background: $red-light;
+}
+
+.alert-success {
+    color: $green-dark;
+    background: $green-light;
+}
+
+.checkout_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $modal-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout_modal_container {
+    background-color: $primary-400;
+    border: solid 1px $grey-300;
+    padding: 2em;
+    box-shadow: $shadow-1;
+    max-width: 400px;
+    border-radius: 6px;
+    width: 90%;
+    text-align: center;
+}
+
+.checkout_modal_subtype {
+    color: $accentColor;
+    text-transform: uppercase;
+    font-size: $smallText;
+}
+
+.checkout_modal > button {
+    color: $accentColor;
+    text-transform: uppercase;
+    font-size: $smallText;
+    color: $grey-100;
+}
+
+.register_p {
+    color: $grey-200;
+}
+
+.register_prompt {
+   // margin-top: 1em
+    color: $accentColor;
+    cursor: pointer;
+}
+

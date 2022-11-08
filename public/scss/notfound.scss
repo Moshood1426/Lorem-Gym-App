@@ -1,0 +1,38 @@
+@import "config";
+
+.intro_nav {
+    padding: 0 2em;
+    padding-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.menu-btn {
+    right: 2rem;
+}
+
+.not_found {
+    text-align: center;
+    padding-top: 4em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ .img {
+   max-width: 600px;
+   display: block;
+   margin: 0 auto;
+   margin-bottom: 2rem;
+ }
+
+ p {
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+   color: $grey-100;
+   max-width: 100%;
+ }
+
+ .link {
+   color: $accentColor;
+   text-decoration: underline;
+   text-transform: capitalize;
+ }

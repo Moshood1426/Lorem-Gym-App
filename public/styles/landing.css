@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'AirbnbCereal_W_Md';
+  src: url("AirbnbCerealWMd.eot");
+  src: url("AirbnbCerealWMd.eot?#iefix") format("embedded-opentype"), url("AirbnbCerealWMd.woff2") format("woff2"), url("AirbnbCerealWMd.woff") format("woff"), url("AirbnbCerealWMd.ttf") format("truetype"), url("AirbnbCerealWMd.svg#AirbnbCerealWMd") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'AirbnbCereal_W_Lt';
+  src: url("AirbnbCerealWLt.eot");
+  src: url("AirbnbCerealWLt.eot?#iefix") format("embedded-opentype"), url("AirbnbCerealWLt.woff2") format("woff2"), url("AirbnbCerealWLt.woff") format("woff"), url("AirbnbCerealWLt.ttf") format("truetype"), url("AirbnbCerealWLt.svg#AirbnbCerealWLt") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'AirbnbCereal_W_XBd';
+  src: url("AirbnbCerealWXBd.eot");
+  src: url("AirbnbCerealWXBd.eot?#iefix") format("embedded-opentype"), url("AirbnbCerealWXBd.woff2") format("woff2"), url("AirbnbCerealWXBd.woff") format("woff"), url("AirbnbCerealWXBd.ttf") format("truetype"), url("AirbnbCerealWXBd.svg#AirbnbCerealWXBd") format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; }
+
+.intro {
+  min-height: 100vh;
+  padding: 0 2em;
+  background: linear-gradient(to right, rgba(27, 27, 29, 0.65), rgba(27, 27, 29, 0.65)), url("/assets/images/gym.jpg") center top;
+  background-size: cover;
+  padding-top: 1em; }
+  .intro_nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .intro_nav_list {
+      font-family: "AirbnbCereal_W_Lt", Sans-Serif, "sans-serif";
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      font-size: 0.875rem;
+      visibility: visible; }
+  .intro_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 91vh;
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto; }
+    .intro_main_sub_title {
+      color: #888484;
+      max-width: 400px; }
+  .intro_btn {
+    padding: 1.25rem 3rem;
+    color: #fff; }
+
+.menu-btn {
+  display: none; }
+
+.gym_name {
+  color: #6AD21A; }
+
+.sign_in {
+  background-color: #1b1b1d;
+  border: solid 1px #333632;
+  padding: .75em 1.5em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all; }
+  .sign_in:hover {
+    background-color: #222;
+    color: #488618; }
+
+.admin {
+  cursor: pointer;
+  border: solid 1px #616168;
+  padding: .75em 1.5em;
+  transition: 0.3s ease-in-out all; }
+  .admin:hover {
+    color: #488618;
+    border-color: #488618; }
+
+@media (max-width: 450px) {
+  .menu-btn {
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;
+    display: block; }
+    .menu-btn__burger {
+      position: absolute;
+      right: 0;
+      top: 0.5rem;
+      width: 28px;
+      height: 3px;
+      background: #888484;
+      transition: 0.3s ease-in-out all; }
+      .menu-btn__burger::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 3px;
+        background: #888484;
+        transition: 0.3s ease-in-out all; }
+      .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 20px;
+        height: 3px;
+        background: #888484;
+        transition: 0.3s ease-in-out all; }
+      .menu-btn__burger.open {
+        transform: rotate(720deg);
+        background: transparent; }
+        .menu-btn__burger.open::before {
+          transform: rotate(45deg) translate(5px, 8px); }
+        .menu-btn__burger.open::after {
+          width: 28px;
+          transform: rotate(-45deg) translate(3px, -7px); }
+  .intro_nav_list {
+    position: absolute;
+    top: 9vh;
+    left: 0;
+    width: 100%;
+    background-color: #202020;
+    flex-direction: column;
+    text-align: center;
+    border: solid 1px #616168;
+    gap: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out; }
+  .sign_in {
+    background-color: #151515;
+    border: none;
+    padding: 2em;
+    width: 100%; }
+    .sign_in:hover {
+      background-color: #222;
+      color: #488618; }
+  .admin {
+    padding: 2em;
+    border: none;
+    width: 100%; } }
+
+.about {
+  padding: 5em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-bottom: 3em;
+  max-width: 600px;
+  margin: 0 auto; }
+  .about_title {
+    text-align: center; }
+  .about_content {
+    font-size: 0.875rem;
+    color: #616168; }
+    .about_content_title {
+      font-size: 1rem;
+      color: #488618;
+      position: relative; }
+      .about_content_title::after {
+        content: "";
+        position: absolute;
+        background-color: #464A45;
+        height: 3px;
+        display: flex;
+        width: calc(100% - 160px);
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%); }
+  @media screen and (min-width: 954px) {
+    .about {
+      padding: 7em 3.5em;
+      max-width: 1200px;
+      flex-direction: row;
+      padding-left: 3.5em;
+      padding-right: 3.5em;
+      gap: 4em;
+      justify-content: space-evenly; }
+      .about_title {
+        max-width: 350px;
+        text-align: left; }
+      .about_content {
+        max-width: 500px; }
+        .about_content_subtitle {
+          border-left: solid 3px #464A45;
+          padding-left: 2em; } }
+
+.body_goals {
+  color: #488618; }
+
+.gym_img {
+  padding: 3em 0;
+  border-top: 2px solid #333632;
+  border-bottom: 2px solid #333632; }
+  .gym_img_content {
+    background: linear-gradient(to right, rgba(27, 27, 29, 0.45), rgba(27, 27, 29, 0.45)), url("../assets/images/gym3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px; }
+
+.feedback {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 4em 2em; }
+  .feedback_title {
+    font-size: 0.875rem;
+    position: relative;
+    font-family: "AirbnbCereal_W_Lt", Sans-Serif, "sans-serif";
+    font-weight: 200;
+    color: #464A45;
+    text-transform: uppercase; }
+    .feedback_title::after {
+      content: "";
+      position: absolute;
+      background-color: #464A45;
+      height: 3px;
+      display: flex;
+      width: calc(100% - 230px);
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%); }
+  .feedback_carousel {
+    margin-top: 2.5em;
+    position: relative; }
+    .feedback_carousel_item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      padding-right: 80px;
+      opacity: 0;
+      transition: visibility 0s, opacity 1s ease-in-out; }
+    .feedback_carousel_item_date {
+      margin-bottom: .5rem;
+      color: #488618; }
+    .feedback_carousel_item_title {
+      margin-top: 0;
+      font-family: "AirbnbCereal_W_Md", Sans-Serif, "sans-serif"; }
+    .feedback_carousel_item_subtitle {
+      color: #888484; }
+
+.active {
+  visibility: visible;
+  padding-bottom: 2em;
+  position: relative;
+  opacity: 1; }
+
+.feedback > p {
+  max-width: 750px; }
+
+.next {
+  position: absolute;
+  top: calc(50% + 2.5em);
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 2; }
+  .next_arrow {
+    width: 50px;
+    cursor: pointer; }
+
+.footer {
+  position: relative;
+  background-color: #222;
+  padding: 2em;
+  text-align: center; }
+  .footer_title {
+    margin: 0;
+    margin-bottom: 1em;
+    max-width: 100%; }
+  .footer_icons_div > i {
+    font-size: 1.5rem;
+    margin-right: 1.2rem; }
+    .footer_icons_div > i:last-child {
+      margin-right: 0; }

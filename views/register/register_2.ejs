@@ -1,0 +1,62 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/styles/register.css" />
+</head>
+
+    <body>
+        <div class="register_container">
+            <section class="back">
+                <a href="/">
+                    <i class="fa-solid fa-less-than"></i> 
+                    Go Home
+                </a>
+            </section>
+            <section class="bg_img"></section>
+
+            <section class="form_content">
+                <form method="POST" action="completeReg" class="form">
+                    <div class="form_intro">
+                        <div class="form_intro_image">
+                            <img src="/assets/images/Logo.svg" class="logo"/>
+                        </div>
+                        <h3 class="form_intro_title">Tell us more about you</h3>
+                        <p class="form_intro_subtitle">Already a member? Login</p>
+                    </div>
+                    <% if (showAlert) { %>
+                        <p class="alert <%=alertType === 'danger' ? 'alert-danger' : 'alert-success' %>">
+                            <%= alertText %>
+                        </p>
+                    <% } %>                
+                    <div class="form_row">
+                        <select name="gender" class="form_select">
+                            <option value="select" selected>Select Gender</option>
+                            <option value="male"> Male </option>
+                            <option value="female"> Female </option>
+                            <option value="others"> Others </option>
+                        </select>
+                    </div>
+                    <div class="form_row">
+                        <select name="employment" class="form_select">
+                            <option value="select" selected>Select Employment Status</option>
+                            <option value="student"> Student </option>
+                            <option value="employed"> Employed </option>
+                            <option value="self-employed"> Self-employed </option>
+                            <option value="unemployed"> Unemployed </option>
+                        </select>
+                    </div>
+                    <div class="form_row">
+                        <input 
+                            type="tel" 
+                            name="number" 
+                            class="form_input"
+                            placeholder="Telephone No."
+                            value="<%= formValue.number %>"
+                        />
+                    </div>
+                    <button class="btn form_btn">Next 2/3</button>
+                </form>
+                
+            </section>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/styles/register.css" />
+</head>
+
+    <body>
+        <div class="register_container">
+            <section class="back">
+                <a href="/">
+                    <i class="fa-solid fa-less-than"></i> 
+                    Go Home
+                </a>
+            </section>
+            <section class="bg_img"></section>
+
+            <section class="form_content">
+                <form class="form" action="login" method="POST">
+                    <div class="form_intro">
+                        <div class="form_intro_image">
+                            <img src="/assets/images/Logo.svg" class="logo"/>
+                        </div>
+                        <h3 class="form_intro_title">Welcome Back</h3>
+                        <p class="form_intro_subtitle">
+                            Lorem ipsum is placeholder text commonly used in the graphic, 
+                            print, and publishing industries. Lorem ipsu
+                        </p>
+                    </div>
+
+                    <% if (showAlert) { %>
+                        <p class="alert <%=alertType === 'danger' ? 'alert-danger' : 'alert-success' %>">
+                            <%= alertText %>
+                        </p>
+                    <% } %> 
+
+                    <div class="form_row">
+                        <input 
+                            type="input" 
+                            name="email" 
+                            class="form_input"
+                            placeholder="email"
+                            value="<%= formValue.email %>"
+                        />
+                    </div>
+                    <div class="form_row">
+                        <input 
+                            type="password" 
+                            name="password" 
+                            class="form_input"
+                            placeholder="password"
+                            value="<%= formValue.password %>"
+                        />
+                    </div>
+                    <p class="form_intro_subtitle register_p">
+                        Don't have an account? 
+                        <a class="register_prompt" href="/auth/register">
+                            Register Now
+                        </a>
+                    </p>
+                    <button class="btn form_btn">Submit</button>
+                </form>  
+            </section>
+        </div>
+    </body>
+</html>

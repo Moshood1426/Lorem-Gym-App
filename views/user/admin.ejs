@@ -1,0 +1,84 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/styles/register.css" />
+</head>
+
+    <body>
+        <div class="register_container">
+            <section class="back">
+                <a href="/">
+                    <i class="fa-solid fa-less-than"></i> 
+                    Go Home
+                </a>
+            </section>
+            <section class="bg_img"></section>
+
+            <section class="form_content">
+                <form class="form" action="/user/admin" method="POST">
+                    <div class="form_intro">
+                        <div class="form_intro_image">
+                            <img src="/assets/images/Logo.svg" class="logo"/>
+                        </div>
+                        <h3 class="form_intro_title">Check User Subscription</h3>
+                        <p class="form_intro_subtitle">
+                            Kindly input a valid user's identifier or email into the
+                            textbox below and we'll help retrieve user details
+                        </p>
+                    </div>
+
+                    <% if (showAlert) { %>
+                        <p class="alert <%=alertType === 'danger' ? 'alert-danger' : 'alert-success' %>">
+                            <%= alertText %>
+                        </p>
+                    <% } %> 
+
+                    <div class="form_row">
+                        <input 
+                            type="input" 
+                            name="info" 
+                            class="form_input"
+                            placeholder="Enter user email or identifier"
+                            value="<%= formValue.info %>"
+                        />
+                    </div>
+
+                    <p class="form_intro_subtitle register_p">
+                        Don't have an account? 
+                        <a class="register_prompt" href="/auth/register">
+                            Register Now
+                        </a>
+                    </p>
+                    <button class="btn form_btn">Check User</button>
+                </form>  
+            </section>
+
+            <% if(userInfo) { %>
+                <section class="checkout_modal">
+                    <div class="checkout_modal_container">
+                        <h3 class="checkout_modal_title">User Details</h3>
+                        <p class="checkout_modal_subtype">
+                            Subscription Type: <%= subInfo.subType %> - <%= subInfo.amount %>
+                        </p>
+                        <p class="checkout_modal_details">
+                           Name: <%= userInfo.name %>
+                        </p>
+                        <p class="checkout_modal_details">
+                            Email: <%= userInfo.email %>
+                         </p>
+                        <p class="checkout_modal_details">
+                            Identifier: <%= subInfo.identifier %>
+                         </p>
+                         <p class="checkout_modal_details">
+                            Status: <%= subInfo.subStatus %>
+                         </p>
+                         <p class="checkout_modal_details">
+                            Expiry Date: <%= subInfo.expiryDate %>
+                         </p>
+                        <form method="GET" action="/user/admin">
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </section>
+            <% } %>
+        </div>
+    </body>
+</html>

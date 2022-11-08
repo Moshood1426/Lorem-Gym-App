@@ -1,0 +1,60 @@
+@import "../assets/fonts/font.scss";
+
+$primary-100: #202020;
+$primary-200: #1A1A1C;
+$primary-300: #1b1b1d;
+$primary-400: #151515;
+
+$grey-100: #888484;
+$grey-200: #616168;
+$grey-300: #464A45;
+$grey-400: #333632;
+
+$white: #fff;
+$black: #222;
+$backgroundColor: $primary-400;
+$accentColor: #488618;
+$accentColorLight: #6AD21A;
+$green-light: #d1e7dd;
+$green-dark: #0f5132;
+$red-light: #f8d7da;
+$red-dark: #842029;
+$modal-background: rgba(0, 0, 0, 0.75);
+
+$AirBnBLight: 'AirbnbCereal_W_Lt', Sans-Serif;
+$AirBnBMedium: 'AirbnbCereal_W_Md', Sans-Serif;
+$AirBnBDark: 'AirbnbCereal_W_XBd', Sans-Serif;
+
+$smallText: 0.875rem;
+$extraSmallText: 0.7em;
+
+$borderRadius: 0.25rem;
+$letterSpacing: 1px;
+$transition: 0.3s ease-in-out all;
+
+$shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+@mixin media-md {
+    @media screen and (min-width: 750px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 954px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

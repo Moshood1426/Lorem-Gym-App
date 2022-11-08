@@ -1,0 +1,81 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/styles/register.css" />
+</head>
+
+    <body>
+        <div class="register_container">
+            <section class="back">
+                <a href="/">
+                    <i class="fa-solid fa-less-than"></i> 
+                     Go Home
+                </a>
+            </section>
+            <section class="bg_img"></section>
+
+            <section class="form_content">
+                <form class="form" action="selectSub" method="POST">
+                    <div class="form_intro">
+                        <div class="form_intro_image">
+                            <img src="/assets/images/Logo.svg" class="logo"/>
+                        </div>
+                        <h3 class="form_intro_title">Select Subscription Status</h3>
+                        
+                    </div>
+
+                    <% if (showAlert) { %>
+                        <p class="alert <%=alertType === 'danger' ? 'alert-danger' : 'alert-success' %>">
+                            <%= alertText %>
+                        </p>
+                    <% } %> 
+
+                    <div class="form_row radio_row">
+                        <input type="radio" name="subtype" id="basic" value="basic" checked>
+                        <label for="basic" class="form_sub">
+                            <div class="form_sub_item">
+                                <h5 class="form_sub_item_title">Monthly</h5>
+                                <p class="form_sub_item_subtitle">
+                                    Lorem ipsum is placeholder text commonly 
+                                    used in the graphic, print, and publishing
+                                </p>
+                            </div>
+                            <h5 class="form_sub_item_price">$27 /mo</h5>
+                        </label>
+                    </div>
+
+                    <div class="form_row radio_row">
+                        <input type="radio" name="subtype" id="premium" value="premium">
+                        <label for="premium" class="form_sub">
+                            <div class="form_sub_item">
+                                <h5 class="form_sub_item_title">Yearly</h5>
+                                <p class="form_sub_item_subtitle">
+                                    Lorem ipsum is placeholder text commonly 
+                                    used in the graphic, print, and publishing
+                                </p>
+                            </div>
+                            <h5 class="form_sub_item_price">$227 /mo</h5>
+                        </label>                     
+                    </div>
+
+                    <button class="btn form_btn">Submit 3/3</button>
+                </form>
+
+                <% if(checkout) { %>
+                    <section class="checkout_modal">
+                        <div class="checkout_modal_container">
+                            <h3 class="checkout_modal_title">Make Payment</h3>
+                            <p class="checkout_modal_subtype">Subscription Type: <%= subtype %> - $<%= amount %> </p>
+                            <p class="checkout_modal_details">
+                                Kindly click the button below to verify your payment. Don't
+                                worry, you won't be asked to make actual payment.
+                            </p>
+                            <form method="POST" action="/auth/checkout">
+                                <button class="btn">Confirm Payment</button>
+                            </form>
+                        </div>
+                    </section>
+                <% } %>
+            </section>
+
+        </div>
+    </body>
+</html>

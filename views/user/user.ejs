@@ -1,0 +1,105 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/styles/landing.css" />
+<link rel="stylesheet" href="/styles/user.css" />
+</head>
+
+<body>
+    <nav class="intro_nav">
+        <div class="intro_nav_image">
+            <img src="/assets/images/Logo.svg" class="logo"/>
+        </div>
+
+        <div class="menu-btn">
+            <span class="menu-btn__burger"></span>
+        </div>
+
+        <ul class="intro_nav_list">
+            <a href="/auth/logout" class="intro_nav_list_item admin">
+                Logout User
+            </a>  
+        </ul>
+    </nav>
+
+    <section class="user">
+        <div class="user_container">
+            <h3 class="user_name">
+                <%= userInfo.name %> 
+                <span class="user_gender">
+                    <%= userInfo.gender %>
+                </span>
+            </h3>
+            <p class="user_identifier">
+                id: <span class="identifier">
+                    <%= subInfo.identifier %>
+                </span>
+            </p>
+            <div class="user_info">
+                <p class="user_info_employment">
+                    <i class="fa-solid fa-person-walking-luggage info_icon"></i>
+                    <%= userInfo.employment %>
+                </p>
+                <p class="user_info_number">
+                    <i class="fa-solid fa-phone info_icon"></i>
+                    <%= userInfo.number %>
+                </p>
+            </div>
+            <p class="user_mail">
+                <i class="fa-solid fa-envelope info_icon"></i>
+                <%= userInfo.email %>
+            </p>
+    
+            <div class="user_sub">
+                <p class="user_sub_status">
+                    Subscription Status: 
+                    <span class="sub_status">
+                        <%= subInfo.subStatus %>
+                    </span>
+                </p>
+                <p class="user_sub_type">
+                    Package Type: 
+                    <span class="sub_type">
+                        <%= subInfo.subType %>
+                    </span>
+                </p>
+                <p class="user_sub_expiry">
+                    Expiry Date: 
+                    <span class="expiry_date">
+                        <%= subInfo.expiryDate %>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="payment">
+        <div class="payment_container">
+            <div class="payment_details">
+                <h5 class="payment_details_title">Amount to pay</h5>
+                <p class="payment_details_price">
+                    <%= subInfo.amount %>
+                </p>
+                <div class="payment_details_info">
+                    <p class="payment_details_date">
+                        Next Payment: 
+                        <span class="next_payment">
+                            <%= subInfo.expiryDate %>
+                        </span>
+                    </p>
+                    <p class="payment_details_remains">
+                        Time Remaining: 
+                        <span class="time_remaining">
+                            <%= subInfo.daysRemaining %>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <button class="btn payment_btn">RENEW NOW</button>
+        </div>
+    </section>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

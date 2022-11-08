@@ -1,0 +1,31 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/styles/landing.css" />
+<link rel="stylesheet" href="/styles/notfound.css" />
+</head>
+
+    <body>
+        <nav class="intro_nav">
+            <div class="intro_nav_image">
+                <img src="/assets/images/Logo.svg" class="logo"/>
+            </div>
+    
+            <div class="menu-btn">
+                <span class="menu-btn__burger"></span>
+            </div>
+    
+            <ul class="intro_nav_list">
+                <li class="intro_nav_list_item admin">Admin</li>
+                    <li class="intro_nav_list_item sign_in"><a href="/auth/login">Sign In</a></li>
+            </ul>
+        </nav>
+
+        <section class="not_found">
+            <div>
+                <img src='/assets/images/error.svg' alt="not found" class="img"/>
+            </div>
+            <h3>Something went wrong with your request!!!</h3>
+            <p>Our engineers are wprking hard to fix this. Kindly remain patient</p>
+            <a href="/" class="link">back home</a>
+        </section>
+    </body>
+</html>
