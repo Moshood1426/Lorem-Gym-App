@@ -38,7 +38,8 @@
   padding-right: 2em;
   position: relative;
   background-color: #1b1b1d;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  z-index: -1; }
   .user_container {
     padding: 2em .5em; }
   .user_identifier {
