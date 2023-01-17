@@ -7,7 +7,7 @@ exports.sequelize = void 0;
 const sequelize_1 = require("sequelize");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const sequelize = new sequelize_1.Sequelize("heroku_9f0d53f4b78be51", process.env.SQL_USER, process.env.SQL_PASSWORD, {
+const sequelize = new sequelize_1.Sequelize("heroku_542784e8331fd2d", process.env.SQL_USER, process.env.SQL_PASSWORD, {
     host: process.env.SQL_HOST,
     dialect: "mysql",
     logging: false,

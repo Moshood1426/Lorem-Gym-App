@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const sequelize = new Sequelize(
-  "heroku_9f0d53f4b78be51",
+  "heroku_542784e8331fd2d",
   process.env.SQL_USER!,
   process.env.SQL_PASSWORD!,
   {
