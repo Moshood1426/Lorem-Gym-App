@@ -3,7 +3,7 @@ import { BadRequestError, UnauthenticatedError } from "../errors";
 import { validationResult } from "express-validator/src/validation-result";
 import User from "../models/userModel";
 import bcrypt from "bcryptjs";
-import { createJWT } from "../utils/jwt";
+// import { createJWT } from "../utils/jwt";
 import Subscription from "../models/subModel";
 import { sequelize } from "../db/connectDB";
 import moment from "moment";

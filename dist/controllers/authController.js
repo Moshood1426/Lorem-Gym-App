@@ -8,6 +8,7 @@ const errors_1 = require("../errors");
 const validation_result_1 = require("express-validator/src/validation-result");
 const userModel_1 = __importDefault(require("../models/userModel"));
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
+// import { createJWT } from "../utils/jwt";
 const subModel_1 = __importDefault(require("../models/subModel"));
 const moment_1 = __importDefault(require("moment"));
 const register = (req, res, next) => {
